@@ -1,6 +1,12 @@
 * Install GNU stow
-* Clone repo to ~/.dotfiles
-* Install specific dotfile with stow, eg:
+* Clone repo
+* Install stowrc from repo:
+
+```
+stow stow --target ~/
+```
+
+* Install any other dotfile with stow, eg:
 
 ```
 stow vim
