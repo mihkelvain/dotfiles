@@ -1,78 +1,74 @@
 !
-!	xrdb -load ~/.Xresources
+!		xrdb -load ~/.Xdefaults
 !
 ! For dark theme
 ! xprop -f _GTK_THEME_VARIANT 8u -set _GTK_THEME_VARIANT "dark" -name "urxvt"
 !
 
 
-Xft.antialias:                  true
-Xft.hinting:                    true
-Xft.hintstyle:                  hintfull
-!xft.rgba::			none
-Xft.autohint:                   true
+Xft.antialias:		  true
+Xft.hinting:		  true
+Xft.hintstyle:		  hintfull
+Xft.autohint:		  true
 
 !########################
 !
 !  URxvt Section
 !
 !#######################
-URxvt.geometry:			80x40
-URxvt.shading:			45
-URxvt.font:			xft:Liberation Mono:size=12
-URxvt.boldFont:			xft:Liberation Mono:size=12
-URxvt.keysym.C-Up:              font-size:increase
-URxvt.keysym.C-Down:            font-size:decrease
-URxvt.keysym.C-S-Up:            font-size:incglobal
-URxvt.keysym.C-S-Down:          font-size:decglobal
-URxvt.keysym.C-equal:           font-size:reset
-URxvt.keysym.C-slash:           font-size:show
-!URxvt.letterSpace: -5
-URxvt.scrollBar:		false
-URxvt.saveLines:		10001
-URxvt.cursorColor:		#50DB0B
-URxvt.cursorBlink:		false
-URxvt.colorBD:			white
-!URxvt.borderLess:		true
-URxvt.url-launcher:		firefox
-URxvt.matcher.button:		1
-!URxvt.perl-ext-common:		default,matcher,tabbed
-URxvt.perl-ext-common:		default,matcher,font-size
-URxvt.depth:			32
-URxvt.secondaryScroll:		true
+URxvt.geometry:		  80x40
+URxvt.shading:		  45
+URxvt.font:		  xft:Liberation Mono:size=11
+URxvt.boldFont:		  xft:Liberation Mono:size=11
+URxvt.keysym.C-Up:	  font-size:increase
+URxvt.keysym.C-Down:	  font-size:decrease
+URxvt.keysym.C-S-Up:	  font-size:incglobal
+URxvt.keysym.C-S-Down:	  font-size:decglobal
+URxvt.keysym.C-equal:	  font-size:reset
+URxvt.keysym.C-slash:	  font-size:show
+URxvt.scrollBar:	  false
+URxvt.saveLines:	  10001
+URxvt.cursorColor:	  #50DB0B
+URxvt.cursorBlink:	  false
+URxvt.colorBD:		  white
+URxvt.url-launcher:	  firefox
+URxvt.matcher.button:	  1
+URxvt.perl-ext-common:	  default,matcher,font-size
+URxvt.depth:		  32
+URxvt.secondaryScroll:	  true
 ! Dont jump to bottom when tty gets new lines
-URxvt.scrollWithBuffer:		true
-URxvt.scrollTtyOutput:		false
-URxvt.scrollTtyKeypress:	true
-URxvt.loginShell:		false
-URxvt.buffered: 		true
-URxvt.inputMethod:		ibus
-URxvt.preeditType:		OnTheSpot,None
+URxvt.scrollWithBuffer:	  true
+URxvt.scrollTtyOutput:	  false
+URxvt.scrollTtyKeypress:  true
+URxvt.loginShell:	  false
+URxvt.buffered:		  true
+URxvt.inputMethod:	  ibus
+URxvt.preeditType:	  OnTheSpot,None
 
-URxvt*foreground:     #DDDDDD
-URxvt*background:     #353535
+URxvt*foreground:	  #DDDDDD
+URxvt*background:	  #353535
 !black
-URxvt*color0:         #353535
-URxvt*color8:         #666666
+URxvt*color0:		  #353535
+URxvt*color8:		  #666666
 !red
-URxvt*color1:         #AE4747
-URxvt*color9:         #EE6363
+URxvt*color1:		  #AE4747
+URxvt*color9:		  #EE6363
 !green
-URxvt*color2:         #50DB0B
-URxvt*color10:        #9ACD32
+URxvt*color2:		  #50DB0B
+URxvt*color10:		  #9ACD32
 !brown/yellow
-URxvt*color3:         #DAA520
-URxvt*color11:        #FFC125
+URxvt*color3:		  #DAA520
+URxvt*color11:		  #FFC125
 !blue
-URxvt*color4:         #6F99B4
-URxvt*color12:        #7C96B0
+URxvt*color4:		  #6F99B4
+URxvt*color12:		  #7C96B0
 !magenta
-URxvt*color5:         #8B7B8B
-URxvt*color13:        #D8BFD8
+URxvt*color5:		  #8B7B8B
+URxvt*color13:		  #D8BFD8
 !cyan
-URxvt*color6:         #A7A15E
-URxvt*color14:        #F0E68C
+URxvt*color6:		  #A7A15E
+URxvt*color14:		  #F0E68C
 !white
-URxvt*color7:         #DDDDDD
-URxvt*color15:        #FFFFFF
+URxvt*color7:		  #DDDDDD
+URxvt*color15:		  #FFFFFF
 
