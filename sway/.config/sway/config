@@ -63,6 +63,9 @@ input * {
 #
 # Basics:
 #
+    # Lock screen
+    bindsym $mod+Alt+l exec swaylock -F -f -l -c 2f2f2f
+
     # start a terminal
     bindsym $mod+Return exec $term
 
