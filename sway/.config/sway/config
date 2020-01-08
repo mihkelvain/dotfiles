@@ -206,6 +206,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Startup apps:
+exec_always "eval $(gnome-keyring-daemon -r) && export SSH_AUTH_SOCK && export GNOME_KEYRING_CONTROL"
 exec swaymsg 'workspace 1:term'
 exec swaymsg 'workspace 1:term; exec urxvt'
 exec swaymsg 'workspace 2:chat; exec teams'
