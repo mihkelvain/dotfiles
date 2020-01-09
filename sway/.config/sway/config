@@ -230,7 +230,7 @@ bindsym $mod+r mode "resize"
 for_window [class="(?i)mpv"] floating enable
 
 # Startup apps:
-exec_always "eval $(gnome-keyring-daemon -r) && export SSH_AUTH_SOCK && export GNOME_KEYRING_CONTROL"
+exec "eval $(gnome-keyring-daemon -r) && export SSH_AUTH_SOCK && export GNOME_KEYRING_CONTROL"
 exec urxvt
 exec teams
 exec flatpak run com.skype.Client
