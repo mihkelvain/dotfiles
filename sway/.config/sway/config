@@ -22,7 +22,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/f31/default/normalish/f31.png fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
 # Example configuration:
 #
@@ -112,11 +112,29 @@ input * {
     bindsym $mod+Shift+Right move right
 #
 # Workspaces:
-#
+
+######grouping workspaces+name####
+set $ws1 "1:term"
+set $ws2 "2:chat"
+set $ws3 "3:mail"
+set $ws4  "4:"
+set $ws5  "5:"
+set $ws6  "6:"
+set $ws7  "7:"
+set $ws8  "8:"
+set $ws9  "9:"
+set $ws10 "10:"
+
+assign [class="(?i)skype"] → $ws2
+assign [class="(?i)teams"] → $ws2
+assign [class="Evolution"] → $ws3
+
+for_window [class="Evolution" title="Compose Message"] floating enable
+
     # switch to workspace
     bindsym $mod+1 workspace "1:term"
     bindsym $mod+2 workspace "2:chat"
-    bindsym $mod+3 workspace 3
+    bindsym $mod+3 workspace "3:mail"
     bindsym $mod+4 workspace 4
     bindsym $mod+5 workspace 5
     bindsym $mod+6 workspace 6
@@ -127,7 +145,7 @@ input * {
     # move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace "1:term"
     bindsym $mod+Shift+2 move container to workspace "2:chat"
-    bindsym $mod+Shift+3 move container to workspace 3
+    bindsym $mod+Shift+3 move container to workspace "3:mail"
     bindsym $mod+Shift+4 move container to workspace 4
     bindsym $mod+Shift+5 move container to workspace 5
     bindsym $mod+Shift+6 move container to workspace 6
@@ -181,8 +199,8 @@ input * {
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # Brightness controls
-    bindsym --locked XF86MonBrightnessUp exec light -A 2
-    bindsym --locked XF86MonBrightnessDown exec light -U 2
+    bindsym XF86MonBrightnessUp exec light -A 2
+    bindsym XF86MonBrightnessDown exec light -U 2
 
 # Resizing containers:
 #
@@ -208,12 +226,14 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+# enable floating mode for all Specified windows
+for_window [class="(?i)mpv"] floating enable
+
 # Startup apps:
 exec_always "eval $(gnome-keyring-daemon -r) && export SSH_AUTH_SOCK && export GNOME_KEYRING_CONTROL"
-exec swaymsg 'workspace 1:term'
-exec swaymsg 'workspace 1:term; exec urxvt'
-exec swaymsg 'workspace 2:chat; exec teams'
-exec swaymsg 'workspace 2:chat; exec flatpak run com.skype.Client'
+exec urxvt
+exec teams
+exec flatpak run com.skype.Client
 
 #
 # Status Bar:
