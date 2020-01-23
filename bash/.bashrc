@@ -22,7 +22,7 @@ genpwd() {
        	[ "$l" == "" ] && l=16
       	tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
-#export GOPATH=$HOME/go
+export GOPATH=$HOME/go
 
 [[ $TERM == "alacritty" ]] && exec tmux new -A -s main
 
@@ -37,4 +37,4 @@ ssh() {
 }
 export TILLER_NAMESPACE=tiller
 
-#export PATH=~/bin/graalvm/bin:$PATH
+export PATH=$GOPATH/bin:$PATH

@@ -4,6 +4,14 @@
 #
 # Read `man 5 sway` for a complete reference.
 
+
+# Options #
+font pango: Source Code Pro:style=Regular 8
+
+# Window borders
+default_border pixel 1
+hide_edge_borders smart
+
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -17,7 +25,7 @@ set $right l
 set $term alacritty
 # Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu "rofi -i -modi drun,run,window -show drun"
 
 ### Output configuration
 #
@@ -86,6 +94,7 @@ input * {
     bindsym $mod+Shift+c reload
     # exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
 #
 # Moving around:
 #
@@ -236,7 +245,7 @@ exec alacritty
 exec teams
 exec flatpak run com.skype.Client
 exec firefox
-
+exec mako
 #
 # Status Bar:
 #
