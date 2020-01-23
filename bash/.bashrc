@@ -24,7 +24,7 @@ genpwd() {
 }
 #export GOPATH=$HOME/go
 
-[[ $TERM == "rxvt-unicode" ]] && exec tmux new -A -s main
+[[ $TERM == "alacritty" ]] && exec tmux new -A -s main
 
 ssh() {
   if [ "$(ps -p $(ps -p $$ -o ppid=) -o comm= | cut -d : -f1)" = "tmux" ]; then
