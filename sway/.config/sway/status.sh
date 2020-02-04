@@ -4,4 +4,4 @@ battery_info=$(upower --show-info $(upower --enumerate | grep 'BAT') | egrep "st
 time_to_empty=$(upower --show-info $(upower --enumerate | grep 'BAT') | egrep "time to empty" | awk '{print $4,$5}')
 # Emojis and characters for the status bar
 # 💎 💻 💡 🔌 ⚡ 📁
-echo $audio_volume $battery_info [Time left: $time_to_empty] 🔋  $date_formatted
+echo $audio_volume $battery_info 🔋$time_to_empty ⏰ $date_formatted
