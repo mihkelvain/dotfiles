@@ -243,6 +243,7 @@ for_window [class="Evolution" title="Compose Message"] floating enable
 exec "eval $(gnome-keyring-daemon -r) && export SSH_AUTH_SOCK && export GNOME_KEYRING_CONTROL"
 exec alacritty
 exec teams
+exec evolution
 exec flatpak run com.skype.Client
 exec firefox
 exec mako
