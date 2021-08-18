@@ -40,4 +40,4 @@ export TILLER_NAMESPACE=tiller
 export PATH=$GOPATH/bin:$PATH
 
 # Choose and activate tallink_ansible virtualenv by default
-source tallink_ansible/bin/activate
+source ~/python_venvs/tallink_ansible/bin/activate
