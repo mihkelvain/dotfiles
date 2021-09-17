@@ -38,6 +38,3 @@ ssh() {
 export TILLER_NAMESPACE=tiller
 
 export PATH=$GOPATH/bin:$PATH
-
-# Choose and activate tallink_ansible virtualenv by default
-source ~/python_venvs/tallink_ansible/bin/activate
