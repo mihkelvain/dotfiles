@@ -9,8 +9,8 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+. /usr/share/git-core/contrib/completion/git-prompt.sh
 
-# User specific aliases and functions
 PS1='\[\033[00;32m\]\u@\h:\[\033[01;34m\]\w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
 
 
