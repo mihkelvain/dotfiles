@@ -35,6 +35,8 @@ ssh() {
         command ssh "$@"
     fi
 }
+
+alias pass='toolbox run  --container pass pass'
 export TILLER_NAMESPACE=tiller
 
 export PATH=$GOPATH/bin:$PATH
