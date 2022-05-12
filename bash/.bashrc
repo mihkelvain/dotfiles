@@ -15,7 +15,7 @@ PS1='\[\033[00;32m\]\u@\h:\[\033[01;34m\]\w\[\033[31m\]$(__git_ps1 "(%s)") \[\03
 
 
 alias sshpwd='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
-alias agent='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa'
+alias agent='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa && ssh-add -s /usr/lib64/opensc-pkcs11.so'
 
 genpwd() {
 	local l=$1
