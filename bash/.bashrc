@@ -22,7 +22,7 @@ else
 	TOOLBOX_NAME="$(hostname)"
 fi
 
-PS1='\[\033[00;32m\]\u@\[\033[00;36m\]$TOOLBOX_NAME:\[\033[01;31m\]\w\[\033[31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
+PS1='\[\033[00;32m\]\u@\[\033[00;36m\]$TOOLBOX_NAME:\[\033[00;32m\]\w\[\033[01;31m\]$(__git_ps1 "(%s)") \[\033[00m\]$\[\033[00m\] '
 
 
 alias sshpwd='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
@@ -33,7 +33,9 @@ genpwd() {
        	[ "$l" == "" ] && l=16
       	tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
 }
+
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 
 [[ $TERM == "alacritty" ]] && exec tmux new -A -s main
 
@@ -47,9 +49,5 @@ ssh() {
     fi
 }
 
-alias pass='toolbox run  --container pass pass'
 export TILLER_NAMESPACE=tiller
-
-export PATH=$GOPATH/bin:$PATH
-
 
