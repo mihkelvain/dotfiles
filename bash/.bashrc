@@ -17,8 +17,7 @@ done
 . /usr/share/git-core/contrib/completion/git-prompt.sh
 
 export GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWUPSTREAM=verbose GIT_PS1_DESCRIBE_STYLE=branch GIT_PS1_SHOWCOLORHINTS=1
-export GIT_PS1_HIDE_IF_PWD_IGNORED=1
+export GIT_PS1_SHOWUPSTREAM="auto verbose" GIT_PS1_DESCRIBE_STYLE=contains
 
 if [ -f "/run/.containerenv" ]; then
 	TOOLBOX_NAME=[container-$(cat /run/.containerenv | grep 'name=' | sed -e 's/^name="\(.*\)"$/\1/')]
