@@ -7,7 +7,8 @@ fi
 
 # User specific environment and startup programs
 
-export EDITOR=vim
+export EDITOR=vi
 export GOPATH=$HOME/go/
 PATH=$PATH:$HOME/.local/bin:$HOME/bin:$GOPATH/bin
 export PATH
+

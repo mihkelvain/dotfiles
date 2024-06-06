@@ -16,6 +16,10 @@ done
 # User specific aliases and functions
 . /usr/share/git-core/contrib/completion/git-prompt.sh
 
+export GIT_PS1_SHOWDIRTYSTATE=1 GIT_PS1_SHOWSTASHSTATE=1 GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWUPSTREAM=verbose GIT_PS1_DESCRIBE_STYLE=branch GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_HIDE_IF_PWD_IGNORED=1
+
 if [ -f "/run/.containerenv" ]; then
 	TOOLBOX_NAME=[container-$(cat /run/.containerenv | grep 'name=' | sed -e 's/^name="\(.*\)"$/\1/')]
 else
@@ -27,6 +31,7 @@ PS1='\[\033[00;32m\]\u@\[\033[00;36m\]$TOOLBOX_NAME:\[\033[00;32m\]\w\[\033[01;3
 
 alias sshpwd='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias agent='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa && ssh-add -s /usr/lib64/opensc-pkcs11.so'
+
 
 genpwd() {
 	local l=$1
