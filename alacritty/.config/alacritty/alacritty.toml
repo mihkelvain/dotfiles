@@ -1,34 +1,19 @@
 live_config_reload = true
 
-[colors.bright]
-black = "0x686868"
-blue = "0x59C2FF"
-cyan = "0x95E6CB"
-green = "0xC2D94C"
-magenta = "0xFFEE99"
-red = "0xF07178"
-white = "0xFFFFFF"
-yellow = "0xFFB454"
-
-[colors.normal]
-black = "0x01060E"
-blue = "0x53BDFA"
-cyan = "0x90E1C6"
-green = "0x91B362"
-magenta = "0xFAE994"
-red = "0xEA6C73"
-white = "0xC7C7C7"
-yellow = "0xF9AF4F"
-
-[colors.primary]
-background = "0x0A0E14"
-foreground = "0xB3B1AD"
+import = [
+  # uncomment the flavour you want below:
+  # "~/.config/alacritty/catppuccin-latte.toml"
+   "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  # "~/.config/alacritty/catppuccin-mocha.toml"
+]
 
 [cursor]
 unfocused_hollow = true
 
 [env]
 WINIT_HIDPI_FACTOR = "8"
+#TERM = "xterm-256color"
 
 [font]
 size = 12.0
@@ -86,4 +71,4 @@ save_to_clipboard = true
 
 [window]
 decorations = "none"
-opacity = 0.9
+#opacity = 0.9
