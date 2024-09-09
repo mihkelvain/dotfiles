@@ -29,6 +29,7 @@ PS1='\[\033[00;32m\]\u@\[\033[00;36m\]$TOOLBOX_NAME:\[\033[00;32m\]\w\[\033[01;3
 alias sshpwd='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no'
 alias agent='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa && ssh-add -s /usr/lib64/opensc-pkcs11.so'
 alias vi='toolbox run -c hackinthebox nvim'
+alias stow='toolbox run -c hackinthebox stow'
 
 genpwd() {
   local l=$1
