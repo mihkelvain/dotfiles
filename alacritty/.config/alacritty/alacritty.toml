@@ -13,7 +13,7 @@ unfocused_hollow = true
 
 [env]
 WINIT_HIDPI_FACTOR = "8"
-#TERM = "xterm-256color"
+TERM = "alacritty-direct"
 
 [font]
 size = 12.0
