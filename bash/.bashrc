@@ -30,6 +30,8 @@ alias sshpwd='ssh -o PreferredAuthentications=password -o PubkeyAuthentication=n
 alias agent='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa && ssh-add -s /usr/lib64/opensc-pkcs11.so'
 alias vi='toolbox run -c hackinthebox nvim'
 alias stow='toolbox run -c hackinthebox stow'
+alias luarocks='toolbox run -c hackinthebox luarocks'
+alias fs='toolbox run -c hackinthebox fd'
 
 genpwd() {
   local l=$1

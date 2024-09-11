@@ -1,19 +1,14 @@
 live_config_reload = true
 
 import = [
-  # uncomment the flavour you want below:
-  # "~/.config/alacritty/catppuccin-latte.toml"
-   "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-mocha.toml"
+   "~/.config/alacritty/tokyo-night.toml"
 ]
+
 
 [cursor]
 unfocused_hollow = true
 
 [env]
-WINIT_HIDPI_FACTOR = "8"
-TERM = "alacritty-direct"
 
 [font]
 size = 12.0
